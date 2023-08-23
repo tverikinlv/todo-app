@@ -6,7 +6,7 @@ import './todo-section.css';
 export default function TodoSection() {
 
     const [text, setText] = useState<string>('');
-    const [todos, setTodos] = useState<{ id: string, text: string, completed: boolean }[]>([]);
+    const [todos, setTodos] = useState<{ id: string, text: string, completed: boolean }[]>(() => JSON.parse(localStorage.getItem('todos') || '[]'));
     const [radioId, setRadioId] = useState<string>('all');
     const [filteredTodos, setFilteredTodos] = useState<{ id: string, text: string, completed: boolean }[]>([]);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -74,6 +74,10 @@ export default function TodoSection() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => filterTodos(), [todos, radioId])
+    
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
     return (
         <section className='todo'>
