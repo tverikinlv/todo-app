@@ -6,3 +6,10 @@
 .container {
     margin: 0 1rem;
 }
+
+@media(min-width: 480px) {
+    .wrapper {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}

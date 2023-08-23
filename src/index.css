@@ -20,7 +20,8 @@
 body[data-theme="light"] {
   --section-bg: hsl(0 0% 98%);
   --main-bg: hsl(236 33% 92%);
-  --shadow-color: hsl(233 11% 84%);
+  --shadow-color: hsl(236 9% 61%);
+  ;
   --strike-text-color: hsl(236 9% 61%);
   --text-color: hsl(235 19% 35%);
   --border-color: hsl(233 11% 84%);
@@ -52,4 +53,20 @@ body {
   font-size: var(--fs-main);
   font-weight: var(--fw-normal);
   color: var(--text-color);
+}
+
+@media(min-width: 992px) {
+  body[data-theme="light"] {
+    background: url('./images/bg-desktop-light.jpg') var(--main-bg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+  }
+
+  body[data-theme="dark"] {
+    background: url('./images/bg-desktop-dark.jpg') var(--main-bg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+  }
 }

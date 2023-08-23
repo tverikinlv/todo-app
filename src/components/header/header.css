@@ -13,3 +13,9 @@
     font-size: 30px;
     letter-spacing: 6px;
 }
+
+@media(min-width: 992px) {
+    .header{
+        margin-top: 6rem;
+    }   
+}
