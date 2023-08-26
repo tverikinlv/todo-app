@@ -1,0 +1,78 @@
+.todo__item {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem;
+    padding-left: 4rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.todo__item-checkbox {
+    position: relative;
+    margin: 0;
+    appearance: none;
+}
+
+.todo__item-checkbox::before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: -41px;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid var(--strike-text-color);
+    border-radius: 50%;
+}
+
+.todo__item-checkbox+label:hover {
+    cursor: pointer;
+}
+
+.todo__item-checkbox+label {
+    padding-right: 1rem;
+}
+
+.todo__item-checkbox:checked+label {
+    text-decoration: line-through;
+    color: var(--strike-text-color);
+}
+
+.todo__item-checkbox:checked::before {
+    background: url('../../images/icon-check.svg'), linear-gradient(145deg, hsl(192 100% 67%), hsl(280 87% 65%));
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 26px;
+    height: 26px;
+    border: none;
+}
+
+.todo__close-button {
+    margin-left: auto;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: url('../../images/icon-cross.svg') center;
+
+}
+
+@media (hover: hover) {
+    .todo__item-checkbox:hover::before {
+        background: linear-gradient(var(--section-bg), var(--section-bg)) padding-box,
+            linear-gradient(145deg, hsl(192 100% 67%), hsl(280 87% 65%)) border-box;
+        border-radius: 50%;
+        border: 1px solid transparent;
+    }
+
+    .todo__item-checkbox:checked:hover::before {
+        background: url('../../images/icon-check.svg'), linear-gradient(145deg, hsl(192 100% 67%), hsl(280 87% 65%));
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+    }
+}

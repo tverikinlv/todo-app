@@ -1,5 +1,5 @@
 import React from 'react';
-import './app.css'
+import './app.css';
 import Header from '../header/header';
 import TodoSection from '../todo-section/todo-section';
 

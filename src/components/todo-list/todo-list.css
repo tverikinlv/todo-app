@@ -1,0 +1,45 @@
+.todo__list {
+
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+}
+
+.todo__list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    background-color: var(--section-bg);
+    color: var(--strike-text-color);
+    font-size: 14px;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 50px 35px -20px var(--shadow-color);
+}
+
+.todo__clear-button {
+    border: none;
+    background: none;
+
+    font-family: var(--family);
+    color: var(--strike-text-color);
+}
+
+.todo__clear-button:active {
+    color: var(--text-color);
+}
+
+@media (hover: hover) {
+    .todo__clear-button:hover {
+        color: var(--text-color);
+    }
+}
