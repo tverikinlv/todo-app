@@ -1,5 +1,4 @@
 .todo__list {
-
     background-color: var(--section-bg);
     color: var(--text-color);
     border-radius: 0.5rem;
@@ -41,5 +40,6 @@
 @media (hover: hover) {
     .todo__clear-button:hover {
         color: var(--text-color);
+        cursor: pointer;
     }
 }

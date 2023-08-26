@@ -39,5 +39,6 @@
 @media (hover: hover) {
     .todo__filter+label:hover {
         color: var(--text-color);
+        cursor: pointer;
     }
 }
